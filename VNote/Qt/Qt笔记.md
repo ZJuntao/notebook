@@ -105,6 +105,67 @@ QString("%1").arg(1)
 ```
 会输出如下：
 `1`
+
+### QMenuBar菜单栏
+```c++
+    //菜单栏，只能有一个
+    QMenuBar * bar = menuBar();
+    //将菜单栏放入窗口
+    setMenuBar(bar);
+
+    //创建菜单
+    QMenu * filemenu = bar->addMenu("文件");
+    QMenu * editmenu = bar->addMenu("编辑");
+
+    //二级菜单
+    QAction * newAction =  filemenu->addAction("新建");
+    QAction * selectAct =  editmenu->addAction("选项");
+
+    //添加分隔线
+    filemenu->addSeparator();
+    filemenu->addAction("打开");    
+```
+
+### QToolBar工具栏
+```C++
+    //工具栏
+    QToolBar *toolBar = new QToolBar(this);
+    addToolBar(Qt::LeftToolBarArea, toolBar);
+
+    //后期设置，停靠范围,左右停靠
+    toolBar->setAllowedAreas(Qt::LeftToolBarArea | Qt::RightToolBarArea);
+
+    //设置浮动
+    toolBar->setFloatable(false);
+
+    //设置移动
+    //toolBar->setMovable(false);
+
+    //设置内容
+    toolBar->addAction(newAction);
+    toolBar->addSeparator();
+    toolBar->addAction(selectAct);
+
+    //添加一些控件
+    QPushButton * btn = new QPushButton("打开", this);
+    toolBar->addWidget(btn);
+```
+
+### QStatusBar状态栏
+```c++
+    //状态栏，最多有一个
+    QStatusBar * stBtn =  statusBar();
+
+    //将状态栏放入窗口
+    setStatusBar(stBtn);
+
+    //放标签控件
+    QLabel * labBtn = new QLabel("提示信息", this);
+    stBtn->addWidget(labBtn);
+
+    QLabel * rightlab = new QLabel("右侧提示信息", this);
+    stBtn->addPermanentWidget(rightlab);
+```
 ## QtDeBug
 1. 设断点
 2. debug

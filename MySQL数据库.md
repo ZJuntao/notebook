@@ -4,15 +4,15 @@
 
 ### create命令创建数据库
 
-create DATABASE 数据库名;
+```create DATABASE 数据库名;```
 
 
 
 ### mysqladmin创建数据库
 
-mysqladmin -u root -p create 数据库名
+```mysqladmin -u root -p create 数据库名;```
 
-Enter password：
+```Enter password：```
 
 
 
@@ -20,21 +20,21 @@ Enter password：
 
 ### drop命令
 
-drop database <数据库名>;
+```drop database <数据库名>;```
 
 
 
 ### mysqladmin  删除数据库
 
-mysqladmin -u root -p drop 数据库名
+```mysqladmin -u root -p drop 数据库名```
 
-Enter password：
+```Enter password：```
 
 
 
 ## 选择数据库
 
-- use RUNOOB;
+```- use RUNOOB;```
 
 
 
