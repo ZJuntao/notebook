@@ -12,3 +12,4 @@
     逻辑区块位址（Logical Block Address, LBA），一个扇区大小大概512Bytes或4K
     ![](_v_images/20210124224811959_12322.png =316x)
     
+4. UEFI（Unifed Extensible Firmware Interface）：统一可延伸固件界面
