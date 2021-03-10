@@ -3,6 +3,12 @@
 1. libxxx: 一般程序会链接到.so库文件，.so 库文件是.so.0.x文件的软链接
 2. telnet +ip +port 查看某个端口是否可以访问
 3. pkill SECDY：杀掉客户端程序
+4. 动态库和.h文件被C程序调用：
+    1. C程序引用.h文件
+    2. 直接调用头文件里定义的函数
+    3. 编译时链接动态库：g++ test.cpp -o test -L. -lPMYBurnSvcSdk -lpthread -ldl
+        >-L：后加动态库所在目录路径，若不加默认搜索/bin/lib/
+        >-l：后加动态库名（Linux中动态库名去掉前缀lib，去掉后缀 .so）
 
 ## 学习笔记
 ### 1.Linux文件权限与目录配置
