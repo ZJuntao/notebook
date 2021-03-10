@@ -15,6 +15,7 @@
     >disable：关闭开机自启
     >start：启动
 4. netstat -anp|grep 17002：查看端口占用情况
+5. ```su -/su/su root```出现鉴定故障后，可用```sudo su root```命令代替
 
 ## 文件属性
 1. chattr +i：会使文件受保护，管理员也无法删除
