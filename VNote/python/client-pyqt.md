@@ -139,7 +139,11 @@ python -m PyQt5.uic.pyuic ui    #文件路径 -o 生成的py文件的文件完�
 			"QToolButton:pressed{{border-image:url({0}{1}_on.png);}}").format(imgPath, 'min'))
 	self.ui.minButton.setToolTip(u'最小化')
 	self.ui.minButton.clicked.connect(self.hide)
+
+    #任务栏图标
+    self.setWindowIcon(QtGui.QIcon(imgPath + 'off.png'))
 ```
+
 
 ## 五、程序结构
 ### 1.logon—>online
